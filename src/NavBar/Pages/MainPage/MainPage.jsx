@@ -17,7 +17,7 @@ const MainPage = () => {
   return (
     <>
       <div>
-        <div className="mx-[10rem] max-w-7xl px-2 lg:px-0 ">
+        <div className="mx-[2rem]  ">
           <div className=" mx-auto max-w-7xl px-2 lg:px-0"></div>
           <Slides />
         </div>
