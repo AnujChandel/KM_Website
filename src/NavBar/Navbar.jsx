@@ -20,8 +20,8 @@ function Navbar() {
   };
 
   return (
-    <div className="relative w-full bg-gray-200 mb-4  bg-gradient-to-r from-green-400 to-blue-500 bg-gradient-to-l hover:bg-gradient-to-r ">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 ">
+    <div className="relative rounded-lg  bg-gray-200 mb-4 ">
+      <div className=" flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 ">
         <div className="inline-flex items-center space-x-2">
           <a
             href={"/"}
@@ -69,8 +69,9 @@ function Navbar() {
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
-                    <span></span>
-                    <span className="font-bold">Main Website</span>
+                    <a href={"/"}>
+                      <span className="font-bold">Main Website</span>
+                    </a>
                   </div>
                   <div className="-mr-2">
                     <button

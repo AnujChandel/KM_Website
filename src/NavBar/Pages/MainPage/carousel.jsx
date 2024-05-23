@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 export function Slides() {
   const slides = [
     {
@@ -27,23 +28,25 @@ export function Slides() {
 
   return (
     <div className="container p-50 m-50">
+      {" "}
+      {/* Adjust padding/margin as needed */}
       <div
-        className={` h-[20rem]   relative group transition-all duration-150 flex items-center justify-center backdrop-brightness-0 shadow-2xl rounded-xl `}
-        style={{ Background: "#050506bf" }}
+        className={` h-[20rem] relative group transition-all duration-150 flex items-center justify-center backdrop-brightness-0 shadow-2xl rounded-xl `}
+        style={{ background: "#050506bf" }}
         data-aos="fade-up"
         data-aos-duration="1000"
       >
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-          className="w-full object-contain h-full bg-center bg-cover duration-500 relative backdrop-blur-xl rounded-xl absolute"
-        >
-          <img
-            className="absolute bottom-[-5rem] left-[6rem] h-[10rem]  w-[10rem] rounded-full object-cover shadow-xl shadow-blue-gray-900/50"
-            src="https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-            alt="Laptop"
-          />
-        </div>
+          className="w-full h-full bg-center bg-cover object-cover duration-500 relative backdrop-blur-xl rounded-xl absolute top-0 left-0"
+        />
+        <img
+          className="absolute bottom-[-5rem] left-10 h-[10rem] w-[10rem] rounded-full object-cover shadow-xl shadow-blue-gray-900/50"
+          src="https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Laptop"
+        />
       </div>
+      
     </div>
   );
 }

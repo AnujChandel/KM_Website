@@ -3,7 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import cardData from "./VideoContent";
+import VideoContent from "./VideoContent";
 
 function Videos() {
   const { pathname } = useLocation();
@@ -24,7 +24,7 @@ function Videos() {
         </p>
       </div> */}
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {Array.from({ length: cardData.length }).map((_, i) => (
+          {Array.from({ length: VideoContent.length }).map((_, i) => (
             <div
               key={i}
               className="mx-auto w-[300px] rounded-md border"
@@ -32,13 +32,13 @@ function Videos() {
               data-aos-duration="1000"
             >
               <img
-                src={cardData[i].url}
+                src={VideoContent[i].url}
                 alt="Laptop"
                 className="h-[200px] w-full rounded-t-md object-cover"
               />
               <div className="p-4">
-                <h1 className="text-lg font-semibold">{cardData[i].title}</h1>
-                <p className="mt-3 text-sm text-gray-600">{cardData[i].des}</p>
+                <h1 className="text-lg font-semibold">{VideoContent[i].title}</h1>
+                <p className="mt-3 text-sm text-gray-600">{VideoContent[i].des}</p>
               </div>
             </div>
           ))}
