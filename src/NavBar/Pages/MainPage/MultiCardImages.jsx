@@ -42,21 +42,26 @@ const MultiCardVideos = () => {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding"
       >
-        {Array.from({ length: PhotoContent.length }).map((_, i) => (
-          <div key={i} style={cardStylePhoto}>
-            <div
-              className="max-w-sm rounded overflow-hidden shadow-2xl"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <img
-                className="h-[200px] w-full rounded-lg shadow-2xl object-cover"
-                src={PhotoContent[i].url}
-                alt={i.title}
-              />
-            </div>
-          </div>
-        ))}
+        {Array.from({ length: Math.min(8, PhotoContent.length) }).map(
+          (_, i) => {
+            const index = PhotoContent.length - 8 + i;
+            return (
+              <div key={index} style={cardStylePhoto}>
+                <div
+                  className="max-w-sm rounded overflow-hidden shadow-2xl"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img
+                    className="h-[200px] w-full rounded-lg shadow-2xl object-cover"
+                    src={PhotoContent[index].url}
+                    alt={PhotoContent[index].title}
+                  />
+                </div>
+              </div>
+            );
+          }
+        )}
       </Carousel>
     </div>
   );

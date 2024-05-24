@@ -1,4 +1,4 @@
-const cardData = [
+const Videocontent = [
   // ... your card data objects here
   {
     title: "The Shawshank Redemption",
@@ -25,5 +25,15 @@ const cardData = [
     des: " 1994",
     url: "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
   },
+  {
+    title: "6",
+    des: " 1993",
+    url: "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
+  },
+  {
+    title: "7",
+    des: " 1994",
+    url: "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
+  },
 ];
-export default cardData;
+export default Videocontent;

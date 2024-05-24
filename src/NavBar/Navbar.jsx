@@ -27,7 +27,7 @@ function Navbar() {
             href={"/"}
             className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
           >
-            <span className="font-bold hover:text-white  group text-gray-900 transition duration-300">
+            <span className="font-bold   group text-gray-900 transition duration-300">
               Main Website
             </span>
           </a>
@@ -38,7 +38,7 @@ function Navbar() {
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="inline-flex items-center text-md font-semibold text-gray-800 hover:text-white  group text-gray-900 transition duration-300"
+                  className="inline-flex items-center text-md font-semibold text-gray-800   group text-gray-900 transition duration-300"
                 >
                   {item.name}
                   <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
@@ -54,7 +54,7 @@ function Navbar() {
           >
             <button
               type="button"
-              className=" hover:text-white  group text-gray-900 transition duration-300 rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              className="bg-white text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded hover:bg-white hover:text-black"
             >
               Admin Log In
             </button>
@@ -107,7 +107,7 @@ function Navbar() {
                     {" "}
                     <button
                       type="button"
-                      className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                      className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-600 md:text-green-600  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                     >
                       Admin Log In
                     </button>
