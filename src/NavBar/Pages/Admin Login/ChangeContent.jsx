@@ -35,7 +35,7 @@ function ChangeContent() {
               <div className="p-4">
                 <h1 className="text-lg font-semibold">{item.title}</h1>
                 <p className="mt-3 text-sm text-gray-600">{item.des}</p>
-
+                <div></div>
                 <button
                   type="button"
                   onClick={() => handleDeleteItem(item.title)}
@@ -48,12 +48,7 @@ function ChangeContent() {
           ))}
         </div>
       </div>
-      <button
-        onClick={replaceVideoContent}
-        className="mt-4 rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-600/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-      >
-        Replace Video Content
-      </button>
+      
     </div>
   );
 }

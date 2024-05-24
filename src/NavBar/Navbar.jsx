@@ -1,6 +1,7 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
 
+
 const menuItems = [
   {
     name: "Videos",
@@ -21,7 +22,7 @@ function Navbar() {
 
   return (
     <div className="relative rounded-lg  bg-gray-200 mb-4 ">
-      <div className=" flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 ">
+      <div className=" flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 m-auto ">
         <div className="inline-flex items-center space-x-2">
           <a
             href={"/"}
@@ -112,6 +113,9 @@ function Navbar() {
                       Admin Log In
                     </button>
                   </a>
+                </div>
+                <div>
+       
                 </div>
               </div>
             </div>
