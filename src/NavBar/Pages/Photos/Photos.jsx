@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useLocation } from "react-router-dom";
 import ImageViewer from "react-simple-image-viewer";
+import VideoContentimg from "../Videos/VideoContent";
 
 function Photos() {
   const { pathname } = useLocation();
@@ -24,8 +25,8 @@ function Photos() {
     setIsViewerOpen(false);
   };
 
-  // Assuming PhotoCard is an array of objects with a 'url' property
-  const PhotoCard = [
+  /*
+    const PhotoCard = [
     {
       url: "https://plus.unsplash.com/premium_photo-1676637000058-96549206fe71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     }, // Replace 'url1' with your actual URL
@@ -34,15 +35,16 @@ function Photos() {
     }, // Replace 'url2' with your actual URL
     // Add more objects as needed
   ];
+*/
 
   return (
     <>
       <div className="mx-auto max-w-7xl px-2 lg:px-0">
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {PhotoCard.map((src, index) => (
+          {VideoContentimg[0]?.items.map((item, index) => (
             <div key={index} className="mx-auto w-[300px] rounded-md border">
               <img
-                src={src.url}
+                src={item.snippet.thumbnails.high.url}
                 onClick={() => openImageViewer(index)}
                 width="300"
                 style={{ margin: "2px" }}
@@ -55,7 +57,9 @@ function Photos() {
         </div>
         {isViewerOpen && (
           <ImageViewer
-            src={PhotoCard.map((item) => item.url)}
+            src={VideoContentimg[0]?.items.map(
+              (item) => item.snippet.thumbnails.high.url
+            )}
             currentIndex={currentImage}
             disableScroll={false}
             closeOnClickOutside={true}

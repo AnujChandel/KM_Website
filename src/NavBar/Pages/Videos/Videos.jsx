@@ -23,9 +23,15 @@ function Videos() {
 
   return (
     <div className="mx-auto max-w-7xl px-2 lg:px-0">
-      <div className="flex flex-row justify-center h-[calc(100%-56px)] bg-white dark:bg-black">
+      <div className="flex flex-row justify-center h-[calc(100%-560px)] bg-white dark:bg-black">
         <div className="w-full max-w-[1200px] flex flex-col lg:flex-row mx-auto ">
-          <div className="flex flex-col lg:w-[calc(100%-300px)] xl:w-[calc(100%-400px)] px-4 py-3 lg:py-6 ">
+          <div
+            className="flex flex-col lg:w-[calc(100%-300px)] xl:w-[calc(100%-00px)] px-4 py-3 lg:py-6 rounded-lg"
+            style={{
+              backgroundImage:
+                'url("https://wallpapers.com/images/high/abstract-white-screen-background-r05pfz81dknpaxu2.webp")',
+            }}
+          >
             <div className="h-[200px] md:h-[400px] lg:h-[400px] xl:h-[550px] ml-[-16px] lg:ml-0 mr-[-16px] lg:mr-0 ">
               <ReactPlayer
                 className="rounded-2xl"
@@ -58,9 +64,7 @@ function Videos() {
             />
             <div className="p-4">
               <h1 className="text-lg font-semibold">{item.snippet.title}</h1>
-              <p className="mt-3 text-sm text-gray-600">
-                {item.snippet.description}
-              </p>
+              <p className="mt-3 text-sm text-gray-600">{item.snippet.title}</p>
             </div>
           </div>
         ))}

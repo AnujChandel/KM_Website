@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import ChangeContent from "./ChangeContent";
+//import ChangeContent from "./ChangeContent";
 function Adminlogin() {
   return (
     <section>
@@ -123,7 +123,7 @@ function Adminlogin() {
           </div>
         </div>
       </div>
-      <ChangeContent />
+      {/*  <ChangeContent />*/}
     </section>
   );
 }

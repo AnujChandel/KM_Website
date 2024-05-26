@@ -1,14 +1,13 @@
-import { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
+import secondImage from "../Asset/imgslide.png";
 
 export function Slides() {
   const slides = [
     {
-      url: "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1510906594845-bc082582c8cc?q=80&w=2044&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "https://cdn.pixabay.com/photo/2018/08/18/13/26/interface-3614766_640.png",
     },
   ];
 
@@ -27,30 +26,29 @@ export function Slides() {
   }, [nextSlide]);
 
   return (
-    <div className="container p-50 m-50">
-      {" "}
-      {/* Adjust padding/margin as needed */}
-      <div
-        className={` h-[20rem] relative group transition-all duration-150 flex items-center justify-center backdrop-brightness-0 shadow-2xl rounded-xl `}
-        style={{ background: "#050506bf" }}
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <div
-          style={{
-            backgroundImage: `url(${slides[currentIndex].url})`,
-            backgroundSize: "contain", // Ensure entire image is visible
-            // backgroundPosition: "center", // Center the image
-            // backgroundRepeat: "no-repeat", // Prevent repetition
-          }}
-          className="w-full h-full bg-center bg-cover object-cover duration-500 relative backdrop-blur-xl rounded-xl absolute top-0 left-0"
-        />
+    <div className="flex items-center justify-center relative">
+      <figure className="relative lg:w-11/12 xl:w-9/12 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 transform hover:scale-105">
+        {/* Main Slide Image */}
         <img
-          className="absolute bottom-[-5rem] left-10 h-[10rem] w-[10rem] rounded-full object-cover shadow-xl shadow-blue-gray-900/50"
-          src="https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="rounded-lg w-full md:max-w-full md:max-h-[25rem] lg:max-h-[30rem]"
+          src={secondImage}
           alt="Laptop"
         />
-      </div>
+
+        {/* Caption */}
+        <figcaption className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer hover:opacity-100">
+          <p className="text-2xl lg:text-4xl text-white text-center font-thin text-gray-900">
+            16 - 6 - 2024
+          </p>
+        </figcaption>
+
+        {/* Second Image */}
+        <img
+          className="absolute bottom-[-5rem] left-[6rem] rounded-full h-[7rem] w-[7rem]"
+          src={secondImage}
+          alt="Laptop"
+        />
+      </figure>
     </div>
   );
 }
