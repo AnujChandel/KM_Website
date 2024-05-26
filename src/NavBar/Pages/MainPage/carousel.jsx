@@ -37,7 +37,12 @@ export function Slides() {
         data-aos-duration="1000"
       >
         <div
-          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+          style={{
+            backgroundImage: `url(${slides[currentIndex].url})`,
+            backgroundSize: "contain", // Ensure entire image is visible
+            // backgroundPosition: "center", // Center the image
+            // backgroundRepeat: "no-repeat", // Prevent repetition
+          }}
           className="w-full h-full bg-center bg-cover object-cover duration-500 relative backdrop-blur-xl rounded-xl absolute top-0 left-0"
         />
         <img
@@ -46,7 +51,6 @@ export function Slides() {
           alt="Laptop"
         />
       </div>
-      
     </div>
   );
 }

@@ -6,11 +6,12 @@ import Photos from "./NavBar/Pages/Photos/Photos";
 import Videos from "./NavBar/Pages/Videos/Videos";
 import MainPage from "./NavBar/Pages/MainPage/MainPage";
 import AdminLogin from "./NavBar/Pages/Admin Login/AdminLogin";
+
 function App() {
   return (
     <>
       <Navbar />
-      
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />

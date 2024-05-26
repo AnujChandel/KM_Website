@@ -2,12 +2,11 @@ import React from "react";
 import VideoContent from "../Videos/VideoContent";
 
 function ChangeContent() {
-  const { videos, deleteVideo } = VideoContent();
   return (
     <div className="mx-auto max-w-7xl px-2 lg:px-0">
       <div className="mx-auto max-w-7xl px-2 lg:px-0">
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {videos.map(
+          {VideoContent.map(
             (
               item,
               index // Call VideoContent as a function
@@ -17,7 +16,7 @@ function ChangeContent() {
                 className="mx-auto w-[300px] rounded-md border"
               >
                 <img
-                  src={item.url}
+                  src={item.imgurl}
                   alt={item.title}
                   className="h-[200px] w-full rounded-t-md object-cover"
                 />
@@ -27,7 +26,6 @@ function ChangeContent() {
                   <div></div>
                   <button
                     type="button"
-                    onClick={() => deleteVideo(index)} // Call deleteVideo with index
                     className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-600/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                   >
                     Delete

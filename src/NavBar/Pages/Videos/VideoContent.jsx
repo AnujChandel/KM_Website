@@ -1,75 +1,679 @@
-import { useState } from "react";
+const VideoContent = [
+  {
+    kind: "youtube#videoListResponse",
+    etag: "u7Rv76vANqbsWIH8QX03fx-wzt8",
+    items: [
+      {
+        kind: "youtube#video",
+        etag: "8b0UbwPyN4NpGAW7RrrJe8WO-sA",
+        id: "k-dcwB3qTMA",
+        snippet: {
+          publishedAt: "2012-12-10T08:00:38Z",
+          channelId: "UCETrNUjuH4EoRdZNFx9EI-A",
+          title: "Dark Souls II - PS3 / X360 / PC - Of Masks and Dragons",
+          description:
+            "Sing a song of Masks and Dragons...\nFROM SOFTWARE and NAMCO BANDAI Games presents a new DARK SOULS to their passionate fans.\nFrom the unrelenting challenges that have become a hallmark of the series, devilish new obstacles rise out from the darkness.\n\nDark Souls II f will be available on Playstation 3, Xbox 360 and PC.\nBegin you journey on www.DarkSoulsII.com or join the Dark Souls II conversation on Facebook at www.Facebook.com/DARKSOULS. \n\nFor more information about this game, you can also visit your local Namco Bandai Games website, http://www.namcobandaigames.eu/",
+          thumbnails: {
+            default: {
+              url: "https://i.ytimg.com/vi/k-dcwB3qTMA/default.jpg",
+              width: 120,
+              height: 90,
+            },
+            medium: {
+              url: "https://i.ytimg.com/vi/k-dcwB3qTMA/mqdefault.jpg",
+              width: 320,
+              height: 180,
+            },
+            high: {
+              url: "https://i.ytimg.com/vi/k-dcwB3qTMA/hqdefault.jpg",
+              width: 480,
+              height: 360,
+            },
+            standard: {
+              url: "https://i.ytimg.com/vi/k-dcwB3qTMA/sddefault.jpg",
+              width: 640,
+              height: 480,
+            },
+            maxres: {
+              url: "https://i.ytimg.com/vi/k-dcwB3qTMA/maxresdefault.jpg",
+              width: 1280,
+              height: 720,
+            },
+          },
+          channelTitle: "BANDAI NAMCO Europe",
+          tags: [
+            "Dark souls II",
+            "Dark Souls 2",
+            "DarkSouls2",
+            "DarkSoulsII",
+            "namco",
+            "bandai",
+            "jeu video",
+            "videogames",
+            "gaming",
+            "games",
+            "Videogame",
+            "videospiel",
+            "videogioco",
+            "videojuego",
+            "jeux videos",
+            "spiele",
+            "gioco",
+            "juego",
+            "X360",
+            "XBOX360",
+            "Xbox 360",
+            "PS3",
+            "Playstation 3",
+            "Playstation3",
+            "PC",
+            "trailer",
+            "video",
+            "teaser",
+            "bande annonce",
+            "journal des developpeurs",
+            "desarrollo",
+            "diario degli sviluppatori",
+            "entwicklertagebuch",
+            "dev diary",
+            "USK 16",
+            "USK16",
+            "PEGI 16+",
+            "PEGI16+",
+            "Dark Souls",
+            "Demon Souls",
+          ],
+          categoryId: "20",
+          liveBroadcastContent: "none",
+          localized: {
+            title: "Dark Souls II - PS3 / X360 / PC - Of Masks and Dragons",
+            description:
+              "Sing a song of Masks and Dragons...\nFROM SOFTWARE and NAMCO BANDAI Games presents a new DARK SOULS to their passionate fans.\nFrom the unrelenting challenges that have become a hallmark of the series, devilish new obstacles rise out from the darkness.\n\nDark Souls II f will be available on Playstation 3, Xbox 360 and PC.\nBegin you journey on www.DarkSoulsII.com or join the Dark Souls II conversation on Facebook at www.Facebook.com/DARKSOULS. \n\nFor more information about this game, you can also visit your local Namco Bandai Games website, http://www.namcobandaigames.eu/",
+          },
+        },
+        contentDetails: {
+          duration: "PT2M2S",
+          dimension: "2d",
+          definition: "hd",
+          caption: "false",
+          licensedContent: false,
+          contentRating: {},
+          projection: "rectangular",
+        },
+        statistics: {
+          viewCount: "969938",
+          likeCount: "11541",
+          favoriteCount: "0",
+          commentCount: "3069",
+        },
+      },
+      {
+        kind: "youtube#video",
+        etag: "cTnBnGpcEplgTsIb8NR7u-KKp2I",
+        id: "4IzXvLXbfzg",
+        snippet: {
+          publishedAt: "2014-03-12T08:58:06Z",
+          channelId: "UCETrNUjuH4EoRdZNFx9EI-A",
+          title:
+            "Dark Souls II - PS3/X360/PC - The Curse of the Dark (EU Launch trailer)",
+          description:
+            '"Your flesh will decay. Your mind will fade. But you won\'t ever die."\nThe wait will end soon, Dark Souls II launches on March 14th in Europe and Australasia!\nGet ready PLAY and DIE!\n\nDark Souls II will be available from March 14th on Playstation 3 and Xbox 360. PC version will be available on April 25th.\nFor more information, please visit the official website www.darksoulsII.eu or your local Bandai Namco Games website, http://www.namcobandaigames.eu\n\nTalk about this game, share tips & win goodies at http://www.namcobandaigames.eu/community',
+          thumbnails: {
+            default: {
+              url: "https://i.ytimg.com/vi/4IzXvLXbfzg/default.jpg",
+              width: 120,
+              height: 90,
+            },
+            medium: {
+              url: "https://i.ytimg.com/vi/4IzXvLXbfzg/mqdefault.jpg",
+              width: 320,
+              height: 180,
+            },
+            high: {
+              url: "https://i.ytimg.com/vi/4IzXvLXbfzg/hqdefault.jpg",
+              width: 480,
+              height: 360,
+            },
+            standard: {
+              url: "https://i.ytimg.com/vi/4IzXvLXbfzg/sddefault.jpg",
+              width: 640,
+              height: 480,
+            },
+            maxres: {
+              url: "https://i.ytimg.com/vi/4IzXvLXbfzg/maxresdefault.jpg",
+              width: 1280,
+              height: 720,
+            },
+          },
+          channelTitle: "BANDAI NAMCO Europe",
+          tags: [
+            "Dark souls II",
+            "Dark Souls 2",
+            "DarkSouls2",
+            "DarkSoulsII",
+            "Dark Souls",
+            "Demon Souls",
+            "namco",
+            "bandai",
+            "jeu video",
+            "videogames",
+            "gaming",
+            "games",
+            "Videogame",
+            "videospiel",
+            "videogioco",
+            "videojuego",
+            "jeux videos",
+            "spiele",
+            "gioco",
+            "juego",
+            "X360",
+            "XBOX360",
+            "Xbox 360",
+            "PS3",
+            "Playstation 3",
+            "Playstation3",
+            "PC",
+            "trailer",
+            "video",
+            "teaser",
+            "bande annonce",
+            "journal des developpeurs",
+            "desarrollo",
+            "diario degli sviluppatori",
+            "entwicklertagebuch",
+            "dev diary",
+            "USK 16",
+            "USK16",
+            "PEGI 16+",
+            "PEGI16+",
+          ],
+          categoryId: "20",
+          liveBroadcastContent: "none",
+          localized: {
+            title:
+              "Dark Souls II - PS3/X360/PC - The Curse of the Dark (EU Launch trailer)",
+            description:
+              '"Your flesh will decay. Your mind will fade. But you won\'t ever die."\nThe wait will end soon, Dark Souls II launches on March 14th in Europe and Australasia!\nGet ready PLAY and DIE!\n\nDark Souls II will be available from March 14th on Playstation 3 and Xbox 360. PC version will be available on April 25th.\nFor more information, please visit the official website www.darksoulsII.eu or your local Bandai Namco Games website, http://www.namcobandaigames.eu\n\nTalk about this game, share tips & win goodies at http://www.namcobandaigames.eu/community',
+          },
+        },
+        contentDetails: {
+          duration: "PT1M33S",
+          dimension: "2d",
+          definition: "hd",
+          caption: "false",
+          licensedContent: false,
+          contentRating: {},
+          projection: "rectangular",
+        },
+        statistics: {
+          viewCount: "279168",
+          likeCount: "3551",
+          favoriteCount: "0",
+          commentCount: "314",
+        },
+      },
+      {
+        kind: "youtube#video",
+        etag: "46WtmsxpO95fMqf8R3ltD4oLFIM",
+        id: "GNoEwZ2-eME",
+        snippet: {
+          publishedAt: "2022-09-29T16:25:58Z",
+          channelId: "UCiZm1O9XMmF8hvm5gz2dMcw",
+          title: "Dark Souls II OST - Fume Knight [Extended]",
+          description:
+            "A half-hour-long extension of Fume Knight from Dark Souls II\n\nArtwork:\nhttps://www.deviantart.com/cragtherock/art/Fume-Knight-536429427",
+          thumbnails: {
+            default: {
+              url: "https://i.ytimg.com/vi/GNoEwZ2-eME/default.jpg",
+              width: 120,
+              height: 90,
+            },
+            medium: {
+              url: "https://i.ytimg.com/vi/GNoEwZ2-eME/mqdefault.jpg",
+              width: 320,
+              height: 180,
+            },
+            high: {
+              url: "https://i.ytimg.com/vi/GNoEwZ2-eME/hqdefault.jpg",
+              width: 480,
+              height: 360,
+            },
+            standard: {
+              url: "https://i.ytimg.com/vi/GNoEwZ2-eME/sddefault.jpg",
+              width: 640,
+              height: 480,
+            },
+            maxres: {
+              url: "https://i.ytimg.com/vi/GNoEwZ2-eME/maxresdefault.jpg",
+              width: 1280,
+              height: 720,
+            },
+          },
+          channelTitle: "TOMITO",
+          tags: [
+            "fume knight ost",
+            "fume knight extended",
+            "fume knight ost extended",
+          ],
+          categoryId: "10",
+          liveBroadcastContent: "none",
+          localized: {
+            title: "Dark Souls II OST - Fume Knight [Extended]",
+            description:
+              "A half-hour-long extension of Fume Knight from Dark Souls II\n\nArtwork:\nhttps://www.deviantart.com/cragtherock/art/Fume-Knight-536429427",
+          },
+        },
+        contentDetails: {
+          duration: "PT33M14S",
+          dimension: "2d",
+          definition: "hd",
+          caption: "false",
+          licensedContent: false,
+          contentRating: {},
+          projection: "rectangular",
+        },
+        statistics: {
+          viewCount: "19411",
+          likeCount: "353",
+          favoriteCount: "0",
+          commentCount: "34",
+        },
+      },
+      {
+        kind: "youtube#video",
+        etag: "xUgjeyRMdgt9FIxC2RqQrBfh7LA",
+        id: "_JCMxxCZUvQ",
+        snippet: {
+          publishedAt: "2022-10-14T21:20:51Z",
+          channelId: "UCrHTv8hU6VjcLOira2gcj-g",
+          title: "Dark Souls III OST - Main theme (Extended)",
+          description:
+            "Composer: Yuka Kitamura\nTrack 02 - Dark Souls III\ntheme extended 1 hour loop\n\n#darksouls3 #soundtrack #ost",
+          thumbnails: {
+            default: {
+              url: "https://i.ytimg.com/vi/_JCMxxCZUvQ/default.jpg",
+              width: 120,
+              height: 90,
+            },
+            medium: {
+              url: "https://i.ytimg.com/vi/_JCMxxCZUvQ/mqdefault.jpg",
+              width: 320,
+              height: 180,
+            },
+            high: {
+              url: "https://i.ytimg.com/vi/_JCMxxCZUvQ/hqdefault.jpg",
+              width: 480,
+              height: 360,
+            },
+            standard: {
+              url: "https://i.ytimg.com/vi/_JCMxxCZUvQ/sddefault.jpg",
+              width: 640,
+              height: 480,
+            },
+            maxres: {
+              url: "https://i.ytimg.com/vi/_JCMxxCZUvQ/maxresdefault.jpg",
+              width: 1280,
+              height: 720,
+            },
+          },
+          channelTitle: "PedroCent07_",
+          categoryId: "10",
+          liveBroadcastContent: "none",
+          localized: {
+            title: "Dark Souls III OST - Main theme (Extended)",
+            description:
+              "Composer: Yuka Kitamura\nTrack 02 - Dark Souls III\ntheme extended 1 hour loop\n\n#darksouls3 #soundtrack #ost",
+          },
+        },
+        contentDetails: {
+          duration: "PT1H1S",
+          dimension: "2d",
+          definition: "hd",
+          caption: "false",
+          licensedContent: false,
+          contentRating: {},
+          projection: "rectangular",
+        },
+        statistics: {
+          viewCount: "7091",
+          likeCount: "86",
+          favoriteCount: "0",
+          commentCount: "5",
+        },
+      },
+      {
+        kind: "youtube#video",
+        etag: "yi912KNM5RJE5DFzJua4dvaUJTQ",
+        id: "l-NT_oUESNQ",
+        snippet: {
+          publishedAt: "2022-01-15T01:48:04Z",
+          channelId: "UCIerjtu2AEVO3AZsPsKVv6Q",
+          title:
+            "All Vendrick Dialogue in Order (With OST) - Dark Souls II: Scholar of the First Sin",
+          description:
+            "Vendrick's dialogue, now with all the missing pieces that were so impossible to find online without interruption. Big thanks to my friend Nepp for retrieving the one piece of dialogue that I missed the last time I tried to upload this video.\n\n#DS2 #DarkSouls2 #DarkSouls",
+          thumbnails: {
+            default: {
+              url: "https://i.ytimg.com/vi/l-NT_oUESNQ/default.jpg",
+              width: 120,
+              height: 90,
+            },
+            medium: {
+              url: "https://i.ytimg.com/vi/l-NT_oUESNQ/mqdefault.jpg",
+              width: 320,
+              height: 180,
+            },
+            high: {
+              url: "https://i.ytimg.com/vi/l-NT_oUESNQ/hqdefault.jpg",
+              width: 480,
+              height: 360,
+            },
+            standard: {
+              url: "https://i.ytimg.com/vi/l-NT_oUESNQ/sddefault.jpg",
+              width: 640,
+              height: 480,
+            },
+            maxres: {
+              url: "https://i.ytimg.com/vi/l-NT_oUESNQ/maxresdefault.jpg",
+              width: 1280,
+              height: 720,
+            },
+          },
+          channelTitle: "The Red Scholar",
+          tags: [
+            "Vendrick",
+            "Vendrick's Dialogue",
+            "Vendrick Dialogue",
+            "Drangleic Castle",
+            "Memory of the King",
+            "Vendrick's OST",
+            "Vendrick OST",
+            "Vendrick Theme",
+            "Vendrick's Theme",
+            "Vendrick Lore",
+            "Scholar of the First Sin",
+            "SotFS",
+            "The Red Scholar",
+            "Red Scholar",
+            "Dark Souls 2",
+            "Dark Souls II",
+            "Dark Souls",
+          ],
+          categoryId: "20",
+          liveBroadcastContent: "none",
+          localized: {
+            title:
+              "All Vendrick Dialogue in Order (With OST) - Dark Souls II: Scholar of the First Sin",
+            description:
+              "Vendrick's dialogue, now with all the missing pieces that were so impossible to find online without interruption. Big thanks to my friend Nepp for retrieving the one piece of dialogue that I missed the last time I tried to upload this video.\n\n#DS2 #DarkSouls2 #DarkSouls",
+          },
+          defaultAudioLanguage: "en",
+        },
+        contentDetails: {
+          duration: "PT5M33S",
+          dimension: "2d",
+          definition: "hd",
+          caption: "false",
+          licensedContent: false,
+          contentRating: {},
+          projection: "rectangular",
+        },
+        statistics: {
+          viewCount: "55740",
+          likeCount: "1584",
+          favoriteCount: "0",
+          commentCount: "120",
+        },
+      },
+      {
+        kind: "youtube#video",
+        etag: "B3tHKAgOnyCqScZioy-0X8iH6BM",
+        id: "n9TadzQb1Ec",
+        snippet: {
+          publishedAt: "2021-01-03T10:12:35Z",
+          channelId: "UCIerjtu2AEVO3AZsPsKVv6Q",
+          title:
+            "All Aldia Dialogue in Order (With OST) - Dark Souls II: Scholar of the First Sin",
+          description:
+            "Made this because I can't believe it didn't exist yet.\nImage source: https://steamcommunity.com/sharedfiles/filedetails/?id=626494404\n\n#DS2 #DarkSouls2 #DarkSouls",
+          thumbnails: {
+            default: {
+              url: "https://i.ytimg.com/vi/n9TadzQb1Ec/default.jpg",
+              width: 120,
+              height: 90,
+            },
+            medium: {
+              url: "https://i.ytimg.com/vi/n9TadzQb1Ec/mqdefault.jpg",
+              width: 320,
+              height: 180,
+            },
+            high: {
+              url: "https://i.ytimg.com/vi/n9TadzQb1Ec/hqdefault.jpg",
+              width: 480,
+              height: 360,
+            },
+            standard: {
+              url: "https://i.ytimg.com/vi/n9TadzQb1Ec/sddefault.jpg",
+              width: 640,
+              height: 480,
+            },
+            maxres: {
+              url: "https://i.ytimg.com/vi/n9TadzQb1Ec/maxresdefault.jpg",
+              width: 1280,
+              height: 720,
+            },
+          },
+          channelTitle: "The Red Scholar",
+          tags: [
+            "Aldia",
+            "Aldia's Dialogue",
+            "Aldia Dialogue",
+            "Aldia's Keep",
+            "Aldia's OST",
+            "Aldia OST",
+            "Aldia Theme",
+            "Aldia's Theme",
+            "Aldia Keep",
+            "Aldia Lore",
+            "Scholar of the First Sin",
+            "SotFS",
+            "The Red Scholar",
+            "Red Scholar",
+          ],
+          categoryId: "20",
+          liveBroadcastContent: "none",
+          localized: {
+            title:
+              "All Aldia Dialogue in Order (With OST) - Dark Souls II: Scholar of the First Sin",
+            description:
+              "Made this because I can't believe it didn't exist yet.\nImage source: https://steamcommunity.com/sharedfiles/filedetails/?id=626494404\n\n#DS2 #DarkSouls2 #DarkSouls",
+          },
+          defaultAudioLanguage: "en",
+        },
+        contentDetails: {
+          duration: "PT6M10S",
+          dimension: "2d",
+          definition: "hd",
+          caption: "true",
+          licensedContent: false,
+          contentRating: {},
+          projection: "rectangular",
+        },
+        statistics: {
+          viewCount: "458216",
+          likeCount: "11888",
+          favoriteCount: "0",
+          commentCount: "657",
+        },
+      },
+      {
+        kind: "youtube#video",
+        etag: "E9POoszLVTKX-eL566ksuIlelCU",
+        id: "kB1_mcTiOYs",
+        snippet: {
+          publishedAt: "2023-01-06T14:38:35Z",
+          channelId: "UClcm_QuMMGFu3GuHqX1xyow",
+          title: "Main Menu Theme - God of War 3 Soundtrack",
+          description:
+            "This song plays in the Main Menu of God of War 3. It is a slower version of Rage of Sparta, incorporating the main Kratos' theme from God of War 1.\n\nThe in-game implementation of this track plays the song twice. First with a calmer start and less brass. Second (starting at 1:43) with a more intense start and full brass.\n\nAlso plays in the PS4/PS5 UI before starting the game.\n\nOther versions of Rage of Sparta:\nOST version: https://youtu.be/9a4Rx7T_lwc\nMain in-game version: https://youtu.be/u708YtaSRcA\nHelios version 1: https://youtu.be/xEpzkP2gPaE\nHelios version 2: https://youtu.be/4DGbvycjkfg\n\nGod of War 3 soundtrack playlist: https://youtube.com/playlist?list=PLCToLibb1EqNxRAJOxDN7wMOBi-ALO8NQ\n\nComposed by Gerard Marino.",
+          thumbnails: {
+            default: {
+              url: "https://i.ytimg.com/vi/kB1_mcTiOYs/default.jpg",
+              width: 120,
+              height: 90,
+            },
+            medium: {
+              url: "https://i.ytimg.com/vi/kB1_mcTiOYs/mqdefault.jpg",
+              width: 320,
+              height: 180,
+            },
+            high: {
+              url: "https://i.ytimg.com/vi/kB1_mcTiOYs/hqdefault.jpg",
+              width: 480,
+              height: 360,
+            },
+            standard: {
+              url: "https://i.ytimg.com/vi/kB1_mcTiOYs/sddefault.jpg",
+              width: 640,
+              height: 480,
+            },
+            maxres: {
+              url: "https://i.ytimg.com/vi/kB1_mcTiOYs/maxresdefault.jpg",
+              width: 1280,
+              height: 720,
+            },
+          },
+          channelTitle: "Jolielegal",
+          tags: [
+            "god of war",
+            "god of war iii",
+            "gow",
+            "gow 3",
+            "gow3",
+            "song",
+            "track",
+            "soundtrack",
+            "music",
+            "theme",
+            "score",
+            "ost",
+            "unreleased",
+            "in game version",
+            "complete version",
+            "full version",
+            "extended version",
+            "musica",
+            "trilha sonora",
+          ],
+          categoryId: "10",
+          liveBroadcastContent: "none",
+          localized: {
+            title: "Main Menu Theme - God of War 3 Soundtrack",
+            description:
+              "This song plays in the Main Menu of God of War 3. It is a slower version of Rage of Sparta, incorporating the main Kratos' theme from God of War 1.\n\nThe in-game implementation of this track plays the song twice. First with a calmer start and less brass. Second (starting at 1:43) with a more intense start and full brass.\n\nAlso plays in the PS4/PS5 UI before starting the game.\n\nOther versions of Rage of Sparta:\nOST version: https://youtu.be/9a4Rx7T_lwc\nMain in-game version: https://youtu.be/u708YtaSRcA\nHelios version 1: https://youtu.be/xEpzkP2gPaE\nHelios version 2: https://youtu.be/4DGbvycjkfg\n\nGod of War 3 soundtrack playlist: https://youtube.com/playlist?list=PLCToLibb1EqNxRAJOxDN7wMOBi-ALO8NQ\n\nComposed by Gerard Marino.",
+          },
+          defaultAudioLanguage: "en",
+        },
+        contentDetails: {
+          duration: "PT3M24S",
+          dimension: "2d",
+          definition: "hd",
+          caption: "false",
+          licensedContent: false,
+          contentRating: {},
+          projection: "rectangular",
+        },
+        statistics: {
+          viewCount: "1331396",
+          likeCount: "16805",
+          favoriteCount: "0",
+          commentCount: "1215",
+        },
+      },
+      {
+        kind: "youtube#video",
+        etag: "ATX5cjB_Ub0nqTCF21IP28YZrIY",
+        id: "X_06wSMSaE8",
+        snippet: {
+          publishedAt: "2015-07-14T04:48:39Z",
+          channelId: "UC2TJsSM6oaoP8tGEiyE5kpw",
+          title:
+            "[PS4] God of War 3 (Remaster) - Opening Cinematic [1080p 60FPS HD]",
+          description:
+            "Stream This FIRE Song - https://olumide.ffm.to/newkeys.OYD\nWatch this Music Video - https://youtu.be/DSdtIN5Wq14\nFollow on Spotify - https://open.spotify.com/artist/3nbRDAM47ubEsdsIF3mVjd\nFollow Us on TikTok - https://tiktok.com/@mxevideos\nBecome a Partner Today - https://dashboard.bentpixels.com/apply/bp/MichaelXboxEvolved\nJoin to get exclusive access to giveaways & livestreams:\nhttps://www.youtube.com/channel/UC2TJsSM6oaoP8tGEiyE5kpw/join\nSUBSCRIBE to Olumide - https://www.youtube.com/channel/UCD5W6V3nOZrpe82mN2PChsw?sub_confirmation=1\nCheck Out Awesome Free Music - https://open.spotify.com/artist/3nbRDAM47ubEsdsIF3mVjd",
+          thumbnails: {
+            default: {
+              url: "https://i.ytimg.com/vi/X_06wSMSaE8/default.jpg",
+              width: 120,
+              height: 90,
+            },
+            medium: {
+              url: "https://i.ytimg.com/vi/X_06wSMSaE8/mqdefault.jpg",
+              width: 320,
+              height: 180,
+            },
+            high: {
+              url: "https://i.ytimg.com/vi/X_06wSMSaE8/hqdefault.jpg",
+              width: 480,
+              height: 360,
+            },
+            standard: {
+              url: "https://i.ytimg.com/vi/X_06wSMSaE8/sddefault.jpg",
+              width: 640,
+              height: 480,
+            },
+            maxres: {
+              url: "https://i.ytimg.com/vi/X_06wSMSaE8/maxresdefault.jpg",
+              width: 1280,
+              height: 720,
+            },
+          },
+          channelTitle: "MichaelXboxEvolved",
+          tags: [
+            "vultra",
+            "mxe",
+            "michaelxboxevolved",
+            "bentpixels",
+            "michaelxe",
+            "mxevideos",
+            "olumide",
+            "[PS4] God of War 3 (Remaster)",
+            "[PS4] God of War 3 (Remaster) - Opening Cinematic",
+            "God of War 3 (Remaster)",
+            "[PS4] God of War 3",
+          ],
+          categoryId: "20",
+          liveBroadcastContent: "none",
+          localized: {
+            title:
+              "[PS4] God of War 3 (Remaster) - Opening Cinematic [1080p 60FPS HD]",
+            description:
+              "Stream This FIRE Song - https://olumide.ffm.to/newkeys.OYD\nWatch this Music Video - https://youtu.be/DSdtIN5Wq14\nFollow on Spotify - https://open.spotify.com/artist/3nbRDAM47ubEsdsIF3mVjd\nFollow Us on TikTok - https://tiktok.com/@mxevideos\nBecome a Partner Today - https://dashboard.bentpixels.com/apply/bp/MichaelXboxEvolved\nJoin to get exclusive access to giveaways & livestreams:\nhttps://www.youtube.com/channel/UC2TJsSM6oaoP8tGEiyE5kpw/join\nSUBSCRIBE to Olumide - https://www.youtube.com/channel/UCD5W6V3nOZrpe82mN2PChsw?sub_confirmation=1\nCheck Out Awesome Free Music - https://open.spotify.com/artist/3nbRDAM47ubEsdsIF3mVjd",
+          },
+        },
+        contentDetails: {
+          duration: "PT3M55S",
+          dimension: "2d",
+          definition: "hd",
+          caption: "false",
+          licensedContent: true,
+          contentRating: {},
+          projection: "rectangular",
+        },
+        statistics: {
+          viewCount: "349451",
+          likeCount: "5684",
+          favoriteCount: "0",
+          commentCount: "342",
+        },
+      },
+    ],
+    pageInfo: {
+      totalResults: 8,
+      resultsPerPage: 8,
+    },
+  },
+];
 
-function VideoContent() {
-  const [videos, setVideos] = useState([
-    {
-      title: "The Shawshank Redemption",
-      des: " 1994",
-      url: "https://youtu.be/n9TadzQb1Ec",
-      imgurl:
-        "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
-    },
-    {
-      title: "The Godfather",
-      des: " 1972",
-      url: "https://youtu.be/UZ9h0BYC_sE",
-      imgurl:
-        "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
-    },
-    {
-      title: "The Dark Knight",
-      des: " 2008",
-      url: "https://youtu.be/GNoEwZ2-eME",
-      imgurl:
-        "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
-    },
-    {
-      title: "Schindler's List",
-      des: " 1993",
-      url: "https://youtu.be/kB1_mcTiOYs",
-      imgurl:
-        "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
-    },
-    {
-      title: "Pulp Fiction",
-      des: " 1994",
-      url: "https://youtu.be/kB1_mcTiOYs",
-      imgurl:
-        "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
-    },
-    {
-      title: "6",
-      des: " 1993",
-      url: "https://youtu.be/k-dcwB3qTMA",
-      imgurl:
-        "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
-    },
-    {
-      title: "7",
-      des: " 1994",
-      url: "https://youtu.be/_zDZYrIUgKE",
-      imgurl:
-        "https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg",
-    },
-  ]);
-
-  const addVideo = () => {
-    // Create a new video object with dynamic data
-    const newVideo = {
-      title: "New Video",
-      des: "Year",
-      url: "https://example.com",
-      imgurl: "https://example.com/image.jpg",
-    };
-
-    // Update state to include the new video
-    setVideos([...videos, newVideo]);
-  };
-
-  const deleteVideo = (index) => {
-    const updatedVideos = videos.filter((video, i) => i !== index);
-    setVideos(updatedVideos);
-  };
-  return { videos, deleteVideo };
-}
 export default VideoContent;
